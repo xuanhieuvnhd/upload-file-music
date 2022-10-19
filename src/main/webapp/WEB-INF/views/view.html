@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Views</title>
+</head>
+<body>
+<p><a th:href="@{/song}">List Song</a></p>
+<div>
+    <p> Song name :
+        <span th:text="${music.name}"></span>
+    </p>
+    <p>
+        <audio  th:src="@{'/music/' + ${music.link}}" type="audio/mpeg" controls>
+        </audio>
+    </p>
+    <p> Song category :
+        <span th:text="${music.category}"></span>
+    </p>
+</div>
+</body>
+</html>
